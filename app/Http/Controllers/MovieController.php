@@ -24,6 +24,8 @@ class MovieController extends Controller
 
     	# return a view to show the moive, with that movie data
 
-    	return 'You want to view the movie ' .$title;
+    	return view('movies.show')->with([
+    		'title' => $title,
+    		]);
     }
 }
