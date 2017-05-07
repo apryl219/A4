@@ -8,6 +8,31 @@ use App\Movie;
 
 class PracticeController extends Controller
 {
+
+   public function practice8() {
+      $movies = Movie::filter('actor', 'LIKE', '%Tom Hanks%');
+
+      dump($movies)
+   }
+
+   public function practice7() {
+      $movies = Movie::all();
+
+      //String
+
+      echo($movies);
+
+
+      //Array
+      foreach($movies as $movie) {
+         dump($movie['cover']);
+      }
+
+      //Object
+      foreach($movies as $movie) {
+         dump($movie->cover);
+      }
+   }
    //How to Delete
 
    public function practice6() {

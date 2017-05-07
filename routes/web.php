@@ -23,10 +23,10 @@ Route::any('/practice/{n?}', 'PracticeController@index');
 /**
 *Main homepage visitors see when they visit just /
 */
-Route::get('/', 'WelcomeController');
+Route::get('/', 'MoviesController@index');
 
 
-Route::get('/debug', function() {
+/**Route::get('/debug', function() {
 
 	echo '<pre>';
 
@@ -47,7 +47,7 @@ Route::get('/debug', function() {
         */
 	//print_r(config('database.connections.mysql'));
 
-	echo '<h1>Test Database Connection</h1>';
+	/**echo '<h1>Test Database Connection</h1>';
 	try {
 		$results = DB::select('SHOW DATABASES;');
 		echo '<strong style="background-color:green; padding:5px;">Connection confirmed</strong>';
@@ -60,7 +60,7 @@ Route::get('/debug', function() {
 
 	echo '</pre>';
 
-});
+});**/
 
 if(App::environment('local')) {
 
